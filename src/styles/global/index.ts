@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: normal;
         font-style: normal;
     }
-    
+
     * {
         font-family: 'NanumSquareRound';
     }
