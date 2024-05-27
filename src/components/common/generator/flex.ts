@@ -8,7 +8,7 @@ interface FlexProps {
 
 const flexGenerator = ({
   direction = "row",
-  align = "stretch",
+  align = "flex-start",
   justify = "flex-start",
 }: FlexProps) => ({
   display: "flex",
