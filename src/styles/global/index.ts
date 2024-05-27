@@ -1,3 +1,4 @@
+import { theme } from './../theme/index';
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
@@ -18,6 +19,12 @@ export const GlobalStyle = createGlobalStyle`
 
     input {
         outline: none;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+    accent-color: ${theme.base['black']};
+    cursor: pointer;
     }
 
     button {
