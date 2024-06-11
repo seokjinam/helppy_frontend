@@ -8,16 +8,19 @@ import Image from "next/image";
 import font from '../common/generator/font';
 import flex from '../common/generator/flex';
 
-export default function PetRadio() {
-    const [selectedPet, setSelectedPet] = useState<string>('');
+type PetRadioProps = {
+    selectedPet: string;
+    setSelectedPet: (pet: string) => void;
+};
 
+export default function PetRadio({ selectedPet, setSelectedPet }: PetRadioProps) {
     const handleSelection = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSelectedPet(e.target.value);
-    };    
+    };
 
     return (
         <PetRadioBox>
-            <RadioButton>
+            <RadioButton onClick={() => setSelectedPet('dog')}>
                 <PetRadioInput 
                     type="radio" 
                     id="dog" 
@@ -31,7 +34,7 @@ export default function PetRadio() {
                 </RadioLabel>
                 <Image src={dogSide} alt="강아지" style={{ width: "5.625rem", height: "5.625rem"}}/>
             </RadioButton>
-            <RadioButton>
+            <RadioButton onClick={() => setSelectedPet('cat')}>
                 <PetRadioInput 
                     type="radio" 
                     id="cat" 
@@ -63,6 +66,11 @@ const RadioButton = styled.div`
     background: #FBFBFB;
     border: 1px solid #CBD5E1;
     border-radius: 1.25rem;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.2);
+        transition: 0.1s ease;
+    }
 `;
 
 const RadioLabel = styled.label`

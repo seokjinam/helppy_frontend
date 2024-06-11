@@ -23,8 +23,8 @@ export const font = {
 
     lead: fontGenerator(400, 1.25, 140, 0),
     large: fontGenerator(700, 1.25, 155, 0),
-    small: fontGenerator(400, 0.875, 100, 0),
-    subtitle: fontGenerator(400, 0.875, 142, 0),
+    small: fontGenerator(400, 1, 100, 0),
+    subtitle: fontGenerator(400, 1., 142, 0),
     
     placeholder: fontGenerator(400, 0.875, 171, 0),
 };
